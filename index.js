@@ -36,8 +36,8 @@ app.get('/envio', (req, res) => {
 // Rota para o formulário de upload
 app.post('/upload', upload.single('file'), (req, res) => {
   // Aqui você pode salvar o arquivo no banco de dados ou fazer qualquer outra ação necessária
-  const file = req.file;
-  console.log(file);
+  // const file = req.file;
+  // console.log(file);
 
   res.sendFile(path.join(__dirname, 'upload.html'));
 });
