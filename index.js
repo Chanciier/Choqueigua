@@ -39,7 +39,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
   const file = req.file;
   console.log(file);
 
-  res.send('Arquivo enviado com sucesso!');
+  res.sendFile(path.join(__dirname, 'upload.html'));
 });
 
 // Inicia o servidor
